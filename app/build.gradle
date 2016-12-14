@@ -5,12 +5,14 @@ buildscript {
     dependencies {
         classpath 'me.tatarka:gradle-retrolambda:3.4.0'
 	classpath 'com.dicedmelon.gradle:jacoco-android:0.1.1'
+	classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.6.3'
     }
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'jacoco-android'
 apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'jacoco-android'
+apply plugin: 'com.github.kt3k.coveralls'
 
 android {
     compileSdkVersion 23

@@ -10,3 +10,4 @@ android:
 jdk:
   - oraclejdk8
 script: ./gradlew testDebug
+after_success: ./gradlew jacocoTestDebugUnitTestReport coveralls
