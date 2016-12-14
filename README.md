@@ -44,6 +44,16 @@ You can view the resulting test reports in HTML by opening this file in your bro
 
     app/build/reports/tests/debug/index.html
 
+## Unit test code coverage
+
+In Gradle:
+
+    $ ./gradlew jacocoTestDebugUnitTestReport
+
+You can view the resulting test reports in HTML by opening this file in your browser:
+
+    app/build/reports/jacoco/jacocoTestDebugUnitTestReport/html/index.html
+
 ## Android instrumentation tests (in-emulator/device system tests)
 
 In Android Studio:
