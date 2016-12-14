@@ -3,16 +3,20 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'me.tatarka:gradle-retrolambda:3.2.2'
+        classpath 'me.tatarka:gradle-retrolambda:3.4.0'
+	classpath 'com.dicedmelon.gradle:jacoco-android:0.1.1'
+	classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.6.3'
     }
 }
 
 apply plugin: 'com.android.application'
 apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'jacoco-android'
+apply plugin: 'com.github.kt3k.coveralls'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 23
+    buildToolsVersion "24.0.2"
 
     defaultConfig {
         applicationId "edu.luc.etl.cs313.android.clickcounter"
@@ -38,8 +42,8 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:22.1.1'
+    compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'junit:junit:4.12'
-    compile 'net.sourceforge.streamsupport:streamsupport:1.2.1'
+    compile 'net.sourceforge.streamsupport:streamsupport:1.5.2'
     testCompile 'org.robolectric:robolectric:2.4'
 }
