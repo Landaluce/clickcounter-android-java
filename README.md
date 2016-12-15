@@ -1,6 +1,11 @@
 [![Build Status](https://travis-ci.org/LoyolaChicagoCode/clickcounter-android-java.svg?branch=master)](https://travis-ci.org/LoyolaChicagoCode/clickcounter-android-java)
 [![codecov.io](https://codecov.io/github/LoyolaChicagoCode/clickcounter-android-java/branch/master/graph/badge.svg)](https://codecov.io/github/LoyolaChicagoCode/clickcounter-android-java)
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3f4e4411f308417e81c950228f5d299f)](https://www.codacy.com/app/laufer/clickcounter-android-java?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LoyolaChicagoCode/clickcounter-android-java&amp;utm_campaign=Badge_Grade)
+
+[![Issue Stats](http://issuestats.com/github/LoyolaChicagoCode/clickcounter-android-java/badge/pr)](http://issuestats.com/github/LoyolaChicagoCode/clickcounter-android-java)
+[![Issue Stats](http://issuestats.com/github/LoyolaChicagoCode/clickcounter-android-java/badge/issue)](http://issuestats.com/github/LoyolaChicagoCode/clickcounter-android-java)
+
 # Learning Objectives
 
 * Simple dependency injection
