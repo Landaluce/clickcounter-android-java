@@ -6,6 +6,8 @@
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/LoyolaChicagoCode/clickcounter-android-java.svg)](http://isitmaintained.com/project/LoyolaChicagoCode/clickcounter-android-java "Average time to resolve an issue")
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/LoyolaChicagoCode/clickcounter-android-java.svg)](http://isitmaintained.com/project/LoyolaChicagoCode/clickcounter-android-java "Percentage of issues still open")
 
+ [ ![Download](https://api.bintray.com/packages/loyolachicagocode/generic/clickcounter-android-java/images/download.svg) ](https://bintray.com/loyolachicagocode/generic/clickcounter-android-java/_latestVersion)
+
 # Learning Objectives
 
 * Simple dependency injection
