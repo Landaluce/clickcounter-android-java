@@ -1,109 +1,106 @@
 package edu.luc.etl.cs313.android.clickcounter;
 
-import android.content.pm.ActivityInfo;
-import android.widget.Button;
-import android.widget.TextView;
-
-import org.junit.Ignore;
-import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
+import android.content.pm.ActivityInfo;
+import android.widget.Button;
+import android.widget.TextView;
+import org.junit.Ignore;
+import org.junit.Test;
+
 /**
- * Abstract GUI-level test superclass for several essential click-counter
- * scenarios.
+ * Abstract GUI-level test superclass for several essential click-counter scenarios.
  *
  * @author laufer
- *         <p/>
- *         TODO figure out how to move this from main to test in Gradle
+ *     <p>TODO figure out how to move this from main to test in Gradle
  */
 @Ignore
 public abstract class AbstractClickCounterActivityTest {
 
-    /** Verifies that the activity under test can be launched. */
-    @Test
-    public void testActivityTestCaseSetUpProperly() {
-        assertNotNull("activity should be launched successfully", getActivity());
+  /** Verifies that the activity under test can be launched. */
+  @Test
+  public void testActivityTestCaseSetUpProperly() {
+    assertNotNull("activity should be launched successfully", getActivity());
+  }
+
+  // begin-method-testActivityScenarioIncReset
+  @Test
+  public void testActivityScenarioIncReset() {
+    assertTrue(getResetButton().performClick());
+    assertEquals(0, getDisplayedValue());
+    assertTrue(getIncButton().isEnabled());
+    assertFalse(getDecButton().isEnabled());
+    assertTrue(getResetButton().isEnabled());
+    assertTrue(getIncButton().performClick());
+    assertEquals(1, getDisplayedValue());
+    assertTrue(getIncButton().isEnabled());
+    assertTrue(getDecButton().isEnabled());
+    assertTrue(getResetButton().isEnabled());
+    assertTrue(getResetButton().performClick());
+    assertEquals(0, getDisplayedValue());
+    assertTrue(getIncButton().isEnabled());
+    assertFalse(getDecButton().isEnabled());
+    assertTrue(getResetButton().isEnabled());
+    assertTrue(getResetButton().performClick());
+  }
+  // end-method-testActivityScenarioIncReset
+
+  @Test
+  public void testActivityScenarioIncUntilFull() {
+    assertTrue(getResetButton().performClick());
+    assertEquals(0, getDisplayedValue());
+    assertTrue(getIncButton().isEnabled());
+    assertFalse(getDecButton().isEnabled());
+    assertTrue(getResetButton().isEnabled());
+    while (getIncButton().isEnabled()) {
+      final int v = getDisplayedValue();
+      assertTrue(getIncButton().performClick());
+      assertEquals(v + 1, getDisplayedValue());
     }
+    assertFalse(getIncButton().isEnabled());
+    assertTrue(getDecButton().isEnabled());
+    assertTrue(getResetButton().isEnabled());
+    assertTrue(getResetButton().performClick());
+  }
 
-    // begin-method-testActivityScenarioIncReset
-    @Test
-    public void testActivityScenarioIncReset() {
-        assertTrue(getResetButton().performClick());
-        assertEquals(0, getDisplayedValue());
-        assertTrue(getIncButton().isEnabled());
-        assertFalse(getDecButton().isEnabled());
-        assertTrue(getResetButton().isEnabled());
-        assertTrue(getIncButton().performClick());
-        assertEquals(1, getDisplayedValue());
-        assertTrue(getIncButton().isEnabled());
-        assertTrue(getDecButton().isEnabled());
-        assertTrue(getResetButton().isEnabled());
-        assertTrue(getResetButton().performClick());
-        assertEquals(0, getDisplayedValue());
-        assertTrue(getIncButton().isEnabled());
-        assertFalse(getDecButton().isEnabled());
-        assertTrue(getResetButton().isEnabled());
-        assertTrue(getResetButton().performClick());
-    }
-    // end-method-testActivityScenarioIncReset
+  // begin-method-testActivityScenarioRotation
+  @Test
+  public void testActivityScenarioRotation() {
+    assertTrue(getResetButton().performClick());
+    assertEquals(0, getDisplayedValue());
+    assertTrue(getIncButton().performClick());
+    assertTrue(getIncButton().performClick());
+    assertTrue(getIncButton().performClick());
+    assertEquals(3, getDisplayedValue());
+    getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+    assertEquals(3, getDisplayedValue());
+    getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+    assertEquals(3, getDisplayedValue());
+    assertTrue(getResetButton().performClick());
+  }
+  // end-method-testActivityScenarioRotation
 
-    @Test
-    public void testActivityScenarioIncUntilFull() {
-        assertTrue(getResetButton().performClick());
-        assertEquals(0, getDisplayedValue());
-        assertTrue(getIncButton().isEnabled());
-        assertFalse(getDecButton().isEnabled());
-        assertTrue(getResetButton().isEnabled());
-        while (getIncButton().isEnabled()) {
-            final int v = getDisplayedValue();
-            assertTrue(getIncButton().performClick());
-            assertEquals(v + 1, getDisplayedValue());
-        }
-        assertFalse(getIncButton().isEnabled());
-        assertTrue(getDecButton().isEnabled());
-        assertTrue(getResetButton().isEnabled());
-        assertTrue(getResetButton().performClick());
-    }
+  // auxiliary methods for easy access to UI widgets
 
-    // begin-method-testActivityScenarioRotation
-    @Test
-    public void testActivityScenarioRotation() {
-        assertTrue(getResetButton().performClick());
-        assertEquals(0, getDisplayedValue());
-        assertTrue(getIncButton().performClick());
-        assertTrue(getIncButton().performClick());
-        assertTrue(getIncButton().performClick());
-        assertEquals(3, getDisplayedValue());
-        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        assertEquals(3, getDisplayedValue());
-        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        assertEquals(3, getDisplayedValue());
-        assertTrue(getResetButton().performClick());
-    }
-    // end-method-testActivityScenarioRotation
+  protected abstract ClickCounterActivity getActivity();
 
-    // auxiliary methods for easy access to UI widgets
+  protected int getDisplayedValue() {
+    final TextView t = (TextView) getActivity().findViewById(R.id.textview_value);
+    return Integer.parseInt(t.getText().toString().trim());
+  }
 
-    protected abstract ClickCounterActivity getActivity();
+  protected Button getIncButton() {
+    return (Button) getActivity().findViewById(R.id.button_increment);
+  }
 
-    protected int getDisplayedValue() {
-        final TextView t = (TextView) getActivity().findViewById(R.id.textview_value);
-        return Integer.parseInt(t.getText().toString().trim());
-    }
+  protected Button getDecButton() {
+    return (Button) getActivity().findViewById(R.id.button_decrement);
+  }
 
-    protected Button getIncButton() {
-        return (Button) getActivity().findViewById(R.id.button_increment);
-    }
-
-    protected Button getDecButton() {
-        return (Button) getActivity().findViewById(R.id.button_decrement);
-    }
-
-    protected Button getResetButton() {
-        return (Button) getActivity().findViewById(R.id.button_reset);
-    }
+  protected Button getResetButton() {
+    return (Button) getActivity().findViewById(R.id.button_reset);
+  }
 }
