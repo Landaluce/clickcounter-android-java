@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/LoyolaChicagoCode/clickcounter-android-java.svg?branch=master)](https://travis-ci.org/LoyolaChicagoCode/clickcounter-android-java)
+[![codecov.io](https://codecov.io/github/LoyolaChicagoCode/clickcounter-android-java/branch/master/graph/badge.svg)](https://codecov.io/github/LoyolaChicagoCode/clickcounter-android-java)
 
 # Learning Objectives
 
