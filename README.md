@@ -1,10 +1,10 @@
 [![Build Status](https://travis-ci.org/LoyolaChicagoCode/clickcounter-android-java.svg?branch=master)](https://travis-ci.org/LoyolaChicagoCode/clickcounter-android-java)
 [![codecov.io](https://codecov.io/github/LoyolaChicagoCode/clickcounter-android-java/branch/master/graph/badge.svg)](https://codecov.io/github/LoyolaChicagoCode/clickcounter-android-java)
-
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3f4e4411f308417e81c950228f5d299f)](https://www.codacy.com/app/laufer/clickcounter-android-java?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LoyolaChicagoCode/clickcounter-android-java&amp;utm_campaign=Badge_Grade)
+[![codebeat badge](https://codebeat.co/badges/f3b52f05-9bb8-4b6a-9c17-52bb5d9b433f)](https://codebeat.co/projects/github-com-loyolachicagocode-clickcounter-android-java)
 
-[![Issue Stats](http://issuestats.com/github/LoyolaChicagoCode/clickcounter-android-java/badge/pr)](http://issuestats.com/github/LoyolaChicagoCode/clickcounter-android-java)
-[![Issue Stats](http://issuestats.com/github/LoyolaChicagoCode/clickcounter-android-java/badge/issue)](http://issuestats.com/github/LoyolaChicagoCode/clickcounter-android-java)
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/LoyolaChicagoCode/clickcounter-android-java.svg)](http://isitmaintained.com/project/LoyolaChicagoCode/clickcounter-android-java "Average time to resolve an issue")
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/LoyolaChicagoCode/clickcounter-android-java.svg)](http://isitmaintained.com/project/LoyolaChicagoCode/clickcounter-android-java "Percentage of issues still open")
 
 # Learning Objectives
 
