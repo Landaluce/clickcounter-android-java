@@ -3,6 +3,10 @@ sudo: false
 android:
   components:
     - android-23
+  licenses:
+    - 'android-sdk-preview-license-.+'
+    - 'android-sdk-license-.+'
+    - 'google-gdk-license-.+'
 jdk:
   - oraclejdk8
 script: ./gradlew testDebug
