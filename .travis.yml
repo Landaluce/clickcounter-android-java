@@ -26,7 +26,7 @@ after_success:
 
 deploy:
   provider: bintray
-  file: descriptor.json
+  file: .bintray-descriptor.json
   user: laufer
   key:
     secure: cqLxck6wUMjGafvLkPC6ZQIGkCfTtlHGIoGR3G9Q7lAmTfJ7kq6yiCMzNywMlv6nbR19s5STzobWCiTj52zn3nLJbX/HxcbDaugAdSSzW7gkzoNzcF5a2v6LswpfnPnmuXypkdbnEeS1RXSfr4TCYO0Xze6DaPY4Z0S6Phs42o0=
