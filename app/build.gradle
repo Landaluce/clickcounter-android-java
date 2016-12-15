@@ -21,13 +21,13 @@ jacocoAndroidUnitTestReport {
 }
 
 android {
-    compileSdkVersion 24
+    compileSdkVersion 23
     buildToolsVersion "24.0.3"
 
     defaultConfig {
         applicationId "edu.luc.etl.cs313.android.clickcounter"
         minSdkVersion 15
-        targetSdkVersion 24
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
     }
