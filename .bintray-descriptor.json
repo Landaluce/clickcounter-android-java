@@ -39,7 +39,7 @@
         [
             {
 		"includePattern": "app/build/outputs/apk/app-debug.apk",
-		"uploadPattern": "/clickcounter-android-java-0.1.53.apk",
+		"uploadPattern": "/clickcounter-android-java-0.1.66.apk",
 		"matrixParams": { "override": 1 }
 	    }
         ],
