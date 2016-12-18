@@ -1,58 +1,29 @@
 package edu.luc.etl.cs313.android.clickcounter;
 
+import android.support.test.filters.SmallTest;
+import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
-import android.test.ActivityInstrumentationTestCase2;
-import android.test.UiThreadTest;
 
+import org.junit.Rule;
 import org.junit.runner.RunWith;
 
 /**
  * Concrete Android test subclass. Has to inherit from framework class and uses delegation to
- * concrete subclass of abstract test superclass. IMPORTANT: project must export JUnit 4 to make it
- * available on the device.
+ * concrete subclass of abstract test superclass.
  *
  * @author laufer
  * @see http://developer.android.com/tools/testing/activity_testing.html
  */
 @RunWith(AndroidJUnit4.class)
+@SmallTest
 public class ClickCounterActivityTest extends AbstractClickCounterActivityTest {
 
-  /**
-   * Creates an {@link ActivityInstrumentationTestCase2} for the {@link SkeletonActivity} activity.
-   */
-  public ClickCounterActivityTest() {
-    super(ClickCounterActivity.class);
-    actualTest =
-        new AbstractClickCounterActivityTest() {
-          @Override
-          protected ClickCounterActivity getActivity() {
-            // return activity instance provided by instrumentation test
-            return ClickCounterActivityTest.this.getActivity();
-          }
-        };
-  }
+  @Rule
+  public ActivityTestRule<ClickCounterActivity> activityRule = new ActivityTestRule<>(
+          ClickCounterActivity.class);
 
-  // test subclass instance to delegate to
-  private AbstractClickCounterActivityTest actualTest;
-
-  public void testActivityTestCaseSetUpProperly() {
-    actualTest.testActivityTestCaseSetUpProperly();
-  }
-
-  // begin-method-testActivityScenarioIncReset
-  @UiThreadTest
-  public void testActivityScenarioIncReset() {
-    actualTest.testActivityScenarioIncReset();
-  }
-  // end-method-testActivityScenarioIncReset
-
-  @UiThreadTest
-  public void testActivityScenarioIncUntilFull() {
-    actualTest.testActivityScenarioIncUntilFull();
-  }
-
-  @UiThreadTest
-  public void testActivityScenarioRotation() {
-    actualTest.testActivityScenarioRotation();
+  @Override
+  protected ClickCounterActivity getActivity() {
+    return activityRule.getActivity();
   }
 }

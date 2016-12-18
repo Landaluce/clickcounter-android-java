@@ -7,8 +7,7 @@ import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
 /**
- * Concrete Robolectric test subclass. For the Gradle unitTest task to work, the Robolectric
- * dependency needs to be isolated here instead of being present in src/main.
+ * Concrete Robolectric test subclass.
  *
  * @author laufer
  * @see http://pivotal.github.com/robolectric

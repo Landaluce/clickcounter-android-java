@@ -6,6 +6,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import android.content.pm.ActivityInfo;
+import android.support.test.annotation.UiThreadTest;
 import android.widget.Button;
 import android.widget.TextView;
 import org.junit.Ignore;
@@ -15,19 +16,20 @@ import org.junit.Test;
  * Abstract GUI-level test superclass for several essential click-counter scenarios.
  *
  * @author laufer
- *     <p>TODO figure out how to move this from main to test in Gradle
  */
 @Ignore
 public abstract class AbstractClickCounterActivityTest {
 
   /** Verifies that the activity under test can be launched. */
   @Test
+  @UiThreadTest
   public void testActivityTestCaseSetUpProperly() {
     assertNotNull("activity should be launched successfully", getActivity());
   }
 
   // begin-method-testActivityScenarioIncReset
   @Test
+  @UiThreadTest
   public void testActivityScenarioIncReset() {
     assertTrue(getResetButton().performClick());
     assertEquals(0, getDisplayedValue());
@@ -49,6 +51,7 @@ public abstract class AbstractClickCounterActivityTest {
   // end-method-testActivityScenarioIncReset
 
   @Test
+  @UiThreadTest
   public void testActivityScenarioIncUntilFull() {
     assertTrue(getResetButton().performClick());
     assertEquals(0, getDisplayedValue());
@@ -68,6 +71,7 @@ public abstract class AbstractClickCounterActivityTest {
 
   // begin-method-testActivityScenarioRotation
   @Test
+  @UiThreadTest
   public void testActivityScenarioRotation() {
     assertTrue(getResetButton().performClick());
     assertEquals(0, getDisplayedValue());
