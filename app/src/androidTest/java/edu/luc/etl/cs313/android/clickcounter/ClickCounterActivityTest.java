@@ -1,7 +1,10 @@
 package edu.luc.etl.cs313.android.clickcounter;
 
+import android.support.test.runner.AndroidJUnit4;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.UiThreadTest;
+
+import org.junit.runner.RunWith;
 
 /**
  * Concrete Android test subclass. Has to inherit from framework class and uses delegation to
@@ -11,8 +14,8 @@ import android.test.UiThreadTest;
  * @author laufer
  * @see http://developer.android.com/tools/testing/activity_testing.html
  */
-public class ClickCounterActivityTest
-    extends ActivityInstrumentationTestCase2<ClickCounterActivity> {
+@RunWith(AndroidJUnit4.class)
+public class ClickCounterActivityTest extends AbstractClickCounterActivityTest {
 
   /**
    * Creates an {@link ActivityInstrumentationTestCase2} for the {@link SkeletonActivity} activity.
