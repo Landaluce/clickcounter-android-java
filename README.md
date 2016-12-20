@@ -1,6 +1,7 @@
-[![Build Status](https://travis-ci.org/LoyolaChicagoCode/clickcounter-android-java.svg?branch=master)](https://travis-ci.org/LoyolaChicagoCode/clickcounter-android-java)
-[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5855a9487c97b60100e6e5d6&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5855a9487c97b60100e6e5d6/build/latest?branch=master)
-[![Download](https://api.bintray.com/packages/loyolachicagocode/generic/clickcounter-android-java/images/download.svg) ](https://bintray.com/loyolachicagocode/generic/clickcounter-android-java/_latestVersion)
+[![Travis-CI Build Status](https://travis-ci.org/LoyolaChicagoCode/clickcounter-android-java.svg?branch=master)](https://travis-ci.org/LoyolaChicagoCode/clickcounter-android-java)
+[![BuddyBuild Status](https://dashboard.buddybuild.com/api/statusImage?appID=5855a9487c97b60100e6e5d6&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5855a9487c97b60100e6e5d6/build/latest?branch=master)
+[![Bitrise Build Status](https://www.bitrise.io/app/30d887c4432aae84.svg?token=he-jVnNMOn-4NnxAJCshOA&branch=master)](https://www.bitrise.io/app/30d887c4432aae84)
+[![Download from Bintray](https://api.bintray.com/packages/loyolachicagocode/generic/clickcounter-android-java/images/download.svg) ](https://bintray.com/loyolachicagocode/generic/clickcounter-android-java/_latestVersion)
 
 [![codecov.io](https://codecov.io/github/LoyolaChicagoCode/clickcounter-android-java/branch/master/graph/badge.svg)](https://codecov.io/github/LoyolaChicagoCode/clickcounter-android-java)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3f4e4411f308417e81c950228f5d299f)](https://www.codacy.com/app/laufer/clickcounter-android-java?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LoyolaChicagoCode/clickcounter-android-java&amp;utm_campaign=Badge_Grade)
