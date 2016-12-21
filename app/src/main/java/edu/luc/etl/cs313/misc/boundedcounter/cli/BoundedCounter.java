@@ -7,18 +7,16 @@ public interface BoundedCounter {
   /**
    * Increments the counter.
    *
-   * @pre the counter is not full
-   * @post the counter is not empty
-   * @throws AssertionError if the precondition is violated.
+   * @pre the counter is not full.
+   * @post the counter is not empty.
    */
   void increment();
 
   /**
    * Decrements the counter.
    *
-   * @pre the counter is not empty
-   * @post the counter is not full
-   * @throws AssertionError if the precondition is violated.
+   * @pre the counter is not empty.
+   * @post the counter is not full.
    */
   void decrement();
 
