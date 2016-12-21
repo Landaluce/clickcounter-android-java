@@ -83,7 +83,6 @@ public class ClickCounterActivity extends Activity {
     findViewById(R.id.button_decrement).setEnabled(!model.isEmpty());
   }
   // end-method-updateView
-  // TODO consider beeping when max is reached
 
   /** Plays the default notification sound. */
   protected void playDefaultNotification() {
