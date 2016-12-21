@@ -9,13 +9,26 @@ import java.io.Serializable;
  */
 public interface ClickCounterModel extends Serializable {
 
-  /** Increments the counter value. Precondition: counter is not full. */
+  /**
+   * Increments the counter value.
+   *
+   * @pre counter is not full.
+   * @post counter is not empty.
+   */
   void increment();
 
-  /** Decrements the counter value. Precondition: counter is not empty. */
+  /** Decrements the counter value.
+   *
+   * @pre counter is not empty.
+   * @post counter is not full.
+   */
   void decrement();
 
-  /** Resets the counter value. Precondition: true. Postcondition: counter is not empty. */
+  /**
+   * Resets the counter value.
+   *
+   * @pre true.
+   * @post counter is not full. */
   void reset();
 
   /**
