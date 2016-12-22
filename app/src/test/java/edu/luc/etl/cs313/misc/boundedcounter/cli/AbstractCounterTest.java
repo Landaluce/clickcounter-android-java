@@ -1,13 +1,14 @@
-package edu.luc.etl.cs313.misc.boundedcounter.model;
+package edu.luc.etl.cs313.misc.boundedcounter.cli;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
-import edu.luc.etl.cs313.misc.boundedcounter.cli.BoundedCounter;
 import org.junit.Test;
 
 /**
  * Testcase superclass for the counter abstraction.
+ * Dependency inversion principle (DIP):
+ * The client (CLI app) owns the abstraction being tested.
  *
  * @author laufer
  * @see http://xunitpatterns.com/Testcase%20Superclass.html

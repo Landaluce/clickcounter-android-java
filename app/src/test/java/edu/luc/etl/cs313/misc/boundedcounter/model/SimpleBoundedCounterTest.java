@@ -7,6 +7,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import edu.luc.etl.cs313.misc.boundedcounter.cli.AbstractCounterTest;
+
 /**
  * Concrete testcase subclass for the default bounded counter implementation.
  *
@@ -34,13 +36,6 @@ public class SimpleBoundedCounterTest extends AbstractCounterTest {
     assertEquals(MIN, counter.get());
   }
 
-  @Test
-  public void testIncrement() {
-    final int v = counter.get();
-    counter.increment();
-    assertEquals(v + 1, counter.get());
-    assertFalse(counter.isEmpty());
-  }
 
   protected void makeEmpty() {
     while (!counter.isEmpty()) counter.decrement();
@@ -63,7 +58,16 @@ public class SimpleBoundedCounterTest extends AbstractCounterTest {
   }
 
   @Test
-  public void testDecrement() {
+  public void testIncrementFromMin() {
+    makeEmpty();
+    final int v = counter.get();
+    counter.increment();
+    assertEquals(v + 1, counter.get());
+    assertFalse(counter.isEmpty());
+  }
+
+  @Test
+  public void testDecrementFromMax() {
     makeFull();
     final int v = counter.get();
     counter.decrement();
