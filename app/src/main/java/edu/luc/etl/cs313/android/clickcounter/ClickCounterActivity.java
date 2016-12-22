@@ -167,7 +167,7 @@ public class ClickCounterActivity extends Activity {
     Log.i(TAG, "restoring model from shared prefs");
     final SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
     final int value = sharedPref.getInt(getString(R.string.value_key), model.get());
-    for (int i = model.get(); i < value; i++) {
+    for (int i = model.get(); i < value; ++i) {
       model.increment();
     }
   }
