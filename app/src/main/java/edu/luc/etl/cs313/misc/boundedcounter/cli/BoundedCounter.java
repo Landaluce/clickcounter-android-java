@@ -1,9 +1,8 @@
 package edu.luc.etl.cs313.misc.boundedcounter.cli;
 
 /**
- * A bounded counter abstraction.
- * Dependency inversion principle (DIP):
- * The client (CLI app) owns this abstraction.
+ * A bounded counter abstraction. Dependency inversion principle (DIP): The client (CLI app) owns
+ * this abstraction.
  */
 // begin-interface-BoundedCounter
 public interface BoundedCounter {

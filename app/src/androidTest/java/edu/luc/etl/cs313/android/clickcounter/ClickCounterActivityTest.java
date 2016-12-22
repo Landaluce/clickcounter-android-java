@@ -3,7 +3,6 @@ package edu.luc.etl.cs313.android.clickcounter;
 import android.support.test.filters.SmallTest;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
-
 import org.junit.Rule;
 import org.junit.runner.RunWith;
 
@@ -19,8 +18,8 @@ import org.junit.runner.RunWith;
 public class ClickCounterActivityTest extends AbstractClickCounterActivityTest {
 
   @Rule
-  public ActivityTestRule<ClickCounterActivity> activityRule = new ActivityTestRule<>(
-          ClickCounterActivity.class);
+  public ActivityTestRule<ClickCounterActivity> activityRule =
+      new ActivityTestRule<>(ClickCounterActivity.class);
 
   @Override
   protected ClickCounterActivity getActivity() {

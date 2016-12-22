@@ -3,11 +3,10 @@ package edu.luc.etl.cs313.misc.boundedcounter.model;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
+import edu.luc.etl.cs313.misc.boundedcounter.cli.AbstractCounterTest;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
-import edu.luc.etl.cs313.misc.boundedcounter.cli.AbstractCounterTest;
 
 /**
  * Concrete testcase subclass for the default bounded counter implementation.
@@ -35,7 +34,6 @@ public class SimpleBoundedCounterTest extends AbstractCounterTest {
   public void testInitiallyAtMin() {
     assertEquals(MIN, counter.get());
   }
-
 
   protected void makeEmpty() {
     while (!counter.isEmpty()) counter.decrement();
