@@ -6,9 +6,8 @@ import static org.junit.Assert.assertFalse;
 import org.junit.Test;
 
 /**
- * Testcase superclass for the counter abstraction.
- * Dependency inversion principle (DIP):
- * The client (CLI app) owns the abstraction being tested.
+ * Testcase superclass for the counter abstraction. Dependency inversion principle (DIP): The client
+ * (CLI app) owns the abstraction being tested.
  *
  * @author laufer
  * @see http://xunitpatterns.com/Testcase%20Superclass.html

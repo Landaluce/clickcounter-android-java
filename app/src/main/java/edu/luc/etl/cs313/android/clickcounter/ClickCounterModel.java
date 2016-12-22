@@ -17,7 +17,8 @@ public interface ClickCounterModel extends Serializable {
    */
   void increment();
 
-  /** Decrements the counter value.
+  /**
+   * Decrements the counter value.
    *
    * @pre counter is not empty.
    * @post counter is not full.
@@ -28,7 +29,8 @@ public interface ClickCounterModel extends Serializable {
    * Resets the counter value.
    *
    * @pre true.
-   * @post counter is not full. */
+   * @post counter is not full.
+   */
   void reset();
 
   /**
