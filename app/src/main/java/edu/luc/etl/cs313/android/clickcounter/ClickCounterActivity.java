@@ -28,7 +28,7 @@ public class ClickCounterActivity extends Activity {
   // TODO slider and additional textview for max counter value
   // TODO enable assertions
 
-  private static String TAG = "clickcounter-android-activity";
+  private static String TAG = "clickcounter-activity";
 
   /** Explicit dependency on the model. (The dependency on the view is implicit.) */
   private ClickCounterModel model;

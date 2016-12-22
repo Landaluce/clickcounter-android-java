@@ -1,6 +1,10 @@
 package edu.luc.etl.cs313.misc.boundedcounter.cli;
 
-/** A bounded counter abstraction. */
+/**
+ * A bounded counter abstraction.
+ * Dependency inversion principle (DIP):
+ * The client (CLI app) owns this abstraction.
+ */
 // begin-interface-BoundedCounter
 public interface BoundedCounter {
 
@@ -35,7 +39,7 @@ public interface BoundedCounter {
   boolean isFull();
 
   /**
-   * Indicates whether the counter is full, i.e., at its minimum value.
+   * Indicates whether the counter is empty, i.e., at its minimum value.
    *
    * @return whether the counter is empty
    */
