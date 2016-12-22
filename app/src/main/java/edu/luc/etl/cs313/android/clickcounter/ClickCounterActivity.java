@@ -12,7 +12,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
-import edu.luc.etl.cs313.misc.boundedcounter.cli.BoundedCounter;
 import edu.luc.etl.cs313.misc.boundedcounter.model.SimpleBoundedCounter;
 import java.io.IOException;
 
@@ -161,31 +160,6 @@ public class ClickCounterActivity extends Activity {
     Log.i(TAG, "onCreateOptionsMenu");
     getMenuInflater().inflate(R.menu.activity_click_counter, menu);
     return true;
-  }
-
-  /**
-   * Creates a model instance from the class name provided as the string value of the external
-   * model_class resource.
-   *
-   * @return the model instance
-   */
-  protected ClickCounterModel createModelFromClassName() {
-    // catch checked exceptions
-    try {
-      // for flexibility, instantiate model based on externally configured class name
-      final BoundedCounter model =
-          Class.forName(getResources().getString(R.string.model_class))
-              .asSubclass(BoundedCounter.class)
-              .getConstructor(Integer.TYPE, Integer.TYPE)
-              .newInstance(0, 10);
-      // TODO set min/max from res/values/numbers like so
-      //                    .newInstance(R.integer.min_val, R.integer.max_val);
-      return new BoundedCounterWrapper(model);
-    } catch (final Throwable ex) {
-      Log.d(TAG, "checked exception while instantiating model", ex);
-      // re-throw as unchecked exception
-      throw new RuntimeException(ex);
-    }
   }
 
   /** Attempts to read the externally saved counter value and update the model. */
