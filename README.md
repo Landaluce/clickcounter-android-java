@@ -53,7 +53,7 @@ In Android Studio:
 
 You can also use Gradle in a Terminal window:
 
-    $ ./gradlew testDebug # the "./" may not be necessary any more
+    $ ./gradlew testDebug # leave out "./" on the Windows command line
 
 You can view the resulting test reports in HTML by opening this file in your browser:
 
@@ -63,7 +63,7 @@ You can view the resulting test reports in HTML by opening this file in your bro
 
 In Gradle:
 
-    $ ./gradlew jacocoTestDebugUnitTestReport # the "./" may not be necessary any more
+    $ ./gradlew jacocoTestDebugUnitTestReport # leave out "./" on the Windows command line
 
 You can view the resulting test reports in HTML by opening this file in your browser:
 
@@ -77,4 +77,4 @@ In Android Studio:
 
 You can also use Gradle in a Terminal window:
 
-    $ ./gradlew connectedDebugAndroidTest # the "./" may not be necessary any more
+    $ ./gradlew connectedDebugAndroidTest # leave out "./" on the Windows command line
