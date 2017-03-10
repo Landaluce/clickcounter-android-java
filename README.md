@@ -30,12 +30,13 @@
 
 # Setting up the Environment
 
-Check out the project using Android Studio. This creates the `local.properties` file
-with the required line
+Check out the project using Android Studio. If AS asks you if you want to create the project, 
+say No and then Open the project from the directory where it was downloaded. This creates 
+the `local.properties` file with the required line:
 
     sdk.dir=<root folder of Android Studio's Android SDK installation>
 
-# Running the Application
+# Running the Application (in an emulator or connected Android device)
 
 In Android Studio: `Run > Run app`
 
@@ -45,13 +46,11 @@ In Android Studio: `Run > Run app`
 
 In Android Studio:
 
-* `View > Tool Windows > Build Variants`
-* `Test Artifact: Unit Tests`
-* right-click on `app/java/edu.luc.etl.cs313 (test)`, then choose `Run Tests in edu.luc.etl.cs313`
+* in the Android view, right-click on `app/java/edu.luc.etl.cs313 (test)`, then choose `Run Tests in edu.luc.etl.cs313`
 
 You can also use Gradle:
 
-    $ ./gradlew testDebug
+    $ ./gradlew testDebug # the "./" may not be necessary any more
 
 You can view the resulting test reports in HTML by opening this file in your browser:
 
@@ -61,7 +60,7 @@ You can view the resulting test reports in HTML by opening this file in your bro
 
 In Gradle:
 
-    $ ./gradlew jacocoTestDebugUnitTestReport
+    $ ./gradlew jacocoTestDebugUnitTestReport # the "./" may not be necessary any more
 
 You can view the resulting test reports in HTML by opening this file in your browser:
 
@@ -71,10 +70,8 @@ You can view the resulting test reports in HTML by opening this file in your bro
 
 In Android Studio:
 
-* `View > Tool Windows > Build Variants`
-* `Test Artifact: Android Instrumentation Tests`
-* right-click on `app/java/edu...clickcounter (androidTest)`, then choose `Run Tests in edu...`
+* in the Android view, right-click on `app/java/edu...clickcounter (androidTest)`, then choose `Run Tests in edu...`
 
 You can also use Gradle:
 
-    $ ./gradlew connectedDebugAndroidTest
+    $ ./gradlew connectedDebugAndroidTest # the "./" may not be necessary any more
