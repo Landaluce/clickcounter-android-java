@@ -46,10 +46,12 @@ In Android Studio: `Run > Run app`
 
 In Android Studio:
 
-* Before running tests, click Run > Edit Configurations... then under Android JUnit click on cs313 in app
-* On the Configuration tab, click the far-right icon in the Working Directory row, and select MODULE_DIR, then click OK
-* If you do not do this, running the unit tests from the Android view will not work!
-* now in the Android view, right-click on `app/java/edu.luc.etl.cs313 (test)`, then choose `Run Tests in edu.luc.etl.cs313`
+* Before running tests, in the *Android* view right-click on `edu.luc.etl.cs313 (test)` - if `Select ...` is one
+* of the visible menu items about 2/3 of the way down, click on that; if `Select ...` is not there, go to the next step
+* Now click `Run > Edit Configurations...` and under `Android JUnit` click on `cs313 in app`
+* On the *Configuration* tab, click the far-right icon in the *Working Directory* row and select `MODULE_DIR`, then click `OK`
+* *If you do not do this, running the unit tests from the Android view will not work!*
+* Finally, right-click on `edu.luc.etl.cs313 (test)`, then choose `Run 'Tests in ...`
 
 You can also use Gradle in a Terminal window:
 
@@ -73,7 +75,7 @@ You can view the resulting test reports in HTML by opening this file in your bro
 
 In Android Studio:
 
-* in the Android view, right-click on `app/java/edu...clickcounter (androidTest)`, then choose `Run Tests in edu...`
+* In the Android view, right-click on `edu.luc.etl.cs313... (androidTest)`, then choose `Run 'Tests in 'edu.luc.et...'`
 
 You can also use Gradle in a Terminal window:
 
