@@ -59,7 +59,7 @@ You can also use Gradle in a Terminal window:
 
 You can view the resulting test reports in HTML by opening this file in your browser:
 
-    app/build/reports/tests/debug/index.html
+    app/build/reports/tests/testDebugUnitTest/index.html
 
 ## Unit test code coverage
 
