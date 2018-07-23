@@ -24,7 +24,7 @@ jacocoAndroidUnitTestReport {
 }
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 27
 
     defaultConfig {
         applicationId "edu.luc.etl.cs313.android.clickcounter"
@@ -63,15 +63,15 @@ android {
 }
 
 dependencies {
-    implementation 'com.android.support:appcompat-v7:25.4.0'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'net.sourceforge.streamsupport:streamsupport:1.5.2'
     // several duplications on account of shared testcase superclass
     testImplementation 'junit:junit:4.12'
     testImplementation 'com.android.support.test:rules:1.0.2'
     testImplementation 'org.robolectric:robolectric:3.5.1'
-    testImplementation 'com.android.support:appcompat-v7:25.4.0'
+    testImplementation 'com.android.support:appcompat-v7:27.1.1'
     androidTestImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support:appcompat-v7:25.4.0'
+    androidTestImplementation 'com.android.support:appcompat-v7:27.1.1'
     androidTestImplementation 'com.android.support.test:rules:1.0.2'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
 }
