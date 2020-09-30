@@ -32,6 +32,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        // Required when setting minSdkVersion to 20 or lower
+        multiDexEnabled true
     }
     buildTypes {
         debug {
@@ -43,6 +45,7 @@ android {
         }
     }
     compileOptions {
+        coreLibraryDesugaringEnabled true
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
@@ -62,6 +65,7 @@ android {
 }
 
 dependencies {
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.0.9'
     // several duplications on account of shared testcase superclass
     testImplementation 'junit:junit:4.13'
     testImplementation 'com.android.support.test:rules:1.0.2'
