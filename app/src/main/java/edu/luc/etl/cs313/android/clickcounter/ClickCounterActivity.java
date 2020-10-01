@@ -3,6 +3,7 @@ package edu.luc.etl.cs313.android.clickcounter;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.RingtoneManager;
@@ -12,8 +13,10 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
-import edu.luc.etl.cs313.misc.boundedcounter.model.SimpleBoundedCounter;
+
 import java.io.IOException;
+
+import edu.luc.etl.cs313.misc.boundedcounter.model.SimpleBoundedCounter;
 
 /**
  * The top-level activity of the click counter. It serves as the adapter that mediates between the
@@ -88,10 +91,13 @@ public class ClickCounterActivity extends Activity {
     final Uri defaultRingtoneUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
     final MediaPlayer mediaPlayer = new MediaPlayer();
     final Context context = getApplicationContext();
+    final AudioAttributes attributes = new AudioAttributes.Builder()
+            .setLegacyStreamType(AudioManager.STREAM_NOTIFICATION)
+            .build();
 
     try {
       mediaPlayer.setDataSource(context, defaultRingtoneUri);
-      mediaPlayer.setAudioStreamType(AudioManager.STREAM_NOTIFICATION);
+      mediaPlayer.setAudioAttributes(attributes);
       mediaPlayer.prepare();
       mediaPlayer.setOnCompletionListener(MediaPlayer::release);
       mediaPlayer.start();
