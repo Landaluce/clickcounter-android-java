@@ -5,6 +5,8 @@ import edu.luc.etl.cs313.misc.boundedcounter.cli.BoundedCounter;
 /** Adapter for using the CLI bounded counter as the Android click counter model. */
 public class BoundedCounterWrapper implements ClickCounterModel {
 
+  private static final long serialVersionUID = -5346273748286172976L;
+  
   private final BoundedCounter counter;
 
   public BoundedCounterWrapper(final BoundedCounter counter) {
