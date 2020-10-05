@@ -6,7 +6,7 @@ import edu.luc.etl.cs313.misc.boundedcounter.cli.BoundedCounter;
 public class BoundedCounterWrapper implements ClickCounterModel {
 
   private static final long serialVersionUID = -5346273748286172976L;
-  
+
   private final BoundedCounter counter;
 
   public BoundedCounterWrapper(final BoundedCounter counter) {
