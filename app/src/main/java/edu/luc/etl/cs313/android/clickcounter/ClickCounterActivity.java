@@ -78,7 +78,7 @@ public class ClickCounterActivity extends Activity {
   /** Updates the view from the model. */
   // begin-method-updateView
   protected void updateView() {
-    final TextView valueView = (TextView) findViewById(R.id.textview_value);
+    final TextView valueView = findViewById(R.id.textview_value);
     valueView.setText(Integer.toString(model.get()));
     // afford controls according to model state
     findViewById(R.id.button_increment).setEnabled(!model.isFull());

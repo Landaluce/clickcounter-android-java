@@ -92,19 +92,19 @@ public abstract class AbstractClickCounterActivityTest {
   protected abstract ClickCounterActivity getActivity();
 
   protected int getDisplayedValue() {
-    final TextView t = (TextView) getActivity().findViewById(R.id.textview_value);
+    final TextView t = getActivity().findViewById(R.id.textview_value);
     return Integer.parseInt(t.getText().toString().trim());
   }
 
   protected Button getIncButton() {
-    return (Button) getActivity().findViewById(R.id.button_increment);
+    return getActivity().findViewById(R.id.button_increment);
   }
 
   protected Button getDecButton() {
-    return (Button) getActivity().findViewById(R.id.button_decrement);
+    return getActivity().findViewById(R.id.button_decrement);
   }
 
   protected Button getResetButton() {
-    return (Button) getActivity().findViewById(R.id.button_reset);
+    return getActivity().findViewById(R.id.button_reset);
   }
 }
