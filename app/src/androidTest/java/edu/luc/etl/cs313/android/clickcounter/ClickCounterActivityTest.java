@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
 public class ClickCounterActivityTest extends AbstractClickCounterActivityTest {
 
   @Rule
-  public ActivityTestRule<ClickCounterActivity> activityRule =
+  public final ActivityTestRule<ClickCounterActivity> activityRule =
       new ActivityTestRule<>(ClickCounterActivity.class);
 
   @Override
