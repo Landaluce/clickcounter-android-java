@@ -88,10 +88,10 @@ public class ClickCounterActivity extends Activity {
 
   /** Plays the default notification sound. */
   protected void playDefaultNotification() {
-    final Uri defaultRingtoneUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-    final MediaPlayer mediaPlayer = new MediaPlayer();
-    final Context context = getApplicationContext();
-    final AudioAttributes attributes = new AudioAttributes.Builder()
+    final var defaultRingtoneUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+    final var mediaPlayer = new MediaPlayer();
+    final var context = getApplicationContext();
+    final var attributes = new AudioAttributes.Builder()
             .setLegacyStreamType(AudioManager.STREAM_NOTIFICATION)
             .build();
 
@@ -171,17 +171,17 @@ public class ClickCounterActivity extends Activity {
   /** Attempts to read the externally saved counter value and update the model. */
   protected void restoreModelFromPrefs() {
     Log.i(TAG, "restoring model from shared prefs");
-    final SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
-    final int value = sharedPref.getInt(getString(R.string.value_key), model.get());
-    for (int i = model.get(); i < value; ++i) {
+    final var sharedPref = getPreferences(Context.MODE_PRIVATE);
+    final var value = sharedPref.getInt(getString(R.string.value_key), model.get());
+    for (var i = model.get(); i < value; ++i) {
       model.increment();
     }
   }
 
   /** Saves the counter value externally. */
   protected void saveModelToPrefs() {
-    final SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
-    final SharedPreferences.Editor editor = sharedPref.edit();
+    final var sharedPref = getPreferences(Context.MODE_PRIVATE);
+    final var editor = sharedPref.edit();
     editor.putInt(getString(R.string.value_key), model.get());
     editor.commit();
   }

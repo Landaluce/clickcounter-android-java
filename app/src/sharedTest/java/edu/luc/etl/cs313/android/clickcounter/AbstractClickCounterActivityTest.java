@@ -59,7 +59,7 @@ public abstract class AbstractClickCounterActivityTest {
     assertFalse(getDecButton().isEnabled());
     assertTrue(getResetButton().isEnabled());
     while (getIncButton().isEnabled()) {
-      final int v = getDisplayedValue();
+      final var v = getDisplayedValue();
       assertTrue(getIncButton().performClick());
       assertEquals(v + 1, getDisplayedValue());
     }

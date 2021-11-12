@@ -16,8 +16,8 @@ public class Main {
    * @param args lower and upper bounds for counter
    */
   public static void main(final String[] args) throws Throwable {
-    int min = DEFAULT_MIN;
-    int max = DEFAULT_MAX;
+    var min = DEFAULT_MIN;
+    var max = DEFAULT_MAX;
     switch (args.length) {
       case 0:
         break;
@@ -45,7 +45,7 @@ public class Main {
     }
 
     public void run() throws Throwable {
-      final BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+      final var in = new BufferedReader(new InputStreamReader(System.in));
       String line;
 
       prompt();
@@ -66,7 +66,7 @@ public class Main {
     }
 
     private void prompt() {
-      final StringBuilder sb = new StringBuilder();
+      final var sb = new StringBuilder();
       sb.append("value=");
       sb.append(model.get());
       sb.append(" [");

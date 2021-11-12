@@ -58,7 +58,7 @@ public class SimpleBoundedCounterTest extends AbstractCounterTest {
   @Test
   public void testIncrementFromMin() {
     makeEmpty();
-    final int v = counter.get();
+    final var v = counter.get();
     counter.increment();
     assertEquals(v + 1, counter.get());
     assertFalse(counter.isEmpty());
@@ -67,7 +67,7 @@ public class SimpleBoundedCounterTest extends AbstractCounterTest {
   @Test
   public void testDecrementFromMax() {
     makeFull();
-    final int v = counter.get();
+    final var v = counter.get();
     counter.decrement();
     assertEquals(v - 1, counter.get());
     assertFalse(counter.isFull());

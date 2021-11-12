@@ -36,7 +36,7 @@ public abstract class AbstractCounterTest {
   public void testIncrement() {
     decrementIfFull();
     assertFalse(counter.isFull());
-    final int v = counter.get();
+    final var v = counter.get();
     counter.increment();
     assertEquals(v + 1, counter.get());
   }
@@ -46,7 +46,7 @@ public abstract class AbstractCounterTest {
   public void testDecrement() {
     incrementIfEmpty();
     assertFalse(counter.isEmpty());
-    final int v = counter.get();
+    final var v = counter.get();
     counter.decrement();
     assertEquals(v - 1, counter.get());
   }
@@ -54,7 +54,7 @@ public abstract class AbstractCounterTest {
   @Test
   public void testGet() {
     // cannot check much other than consistency across invocations
-    final int v = counter.get();
+    final var v = counter.get();
     assertEquals(v, counter.get());
   }
 
