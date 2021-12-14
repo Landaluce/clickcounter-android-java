@@ -1,6 +1,6 @@
-package edu.luc.etl.cs313.misc.boundedcounter.cli;
+package edu.luc.etl.cs313.clickcounter.cli;
 
-import edu.luc.etl.cs313.misc.boundedcounter.model.SimpleBoundedCounter;
+import edu.luc.etl.cs313.clickcounter.model.SimpleBoundedCounter;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 

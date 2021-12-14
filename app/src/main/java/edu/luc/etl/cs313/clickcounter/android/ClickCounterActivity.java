@@ -1,13 +1,11 @@
-package edu.luc.etl.cs313.android.clickcounter;
+package edu.luc.etl.cs313.clickcounter.android;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.RingtoneManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -16,7 +14,8 @@ import android.widget.TextView;
 
 import java.io.IOException;
 
-import edu.luc.etl.cs313.misc.boundedcounter.model.SimpleBoundedCounter;
+import edu.luc.etl.cs313.clickcounter.model.BoundedCounterWrapper;
+import edu.luc.etl.cs313.clickcounter.model.SimpleBoundedCounter;
 
 /**
  * The top-level activity of the click counter. It serves as the adapter that mediates between the

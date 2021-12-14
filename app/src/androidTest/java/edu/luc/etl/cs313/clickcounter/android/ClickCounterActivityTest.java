@@ -1,4 +1,4 @@
-package edu.luc.etl.cs313.android.clickcounter;
+package edu.luc.etl.cs313.clickcounter.android;
 
 import android.support.test.filters.SmallTest;
 import android.support.test.rule.ActivityTestRule;

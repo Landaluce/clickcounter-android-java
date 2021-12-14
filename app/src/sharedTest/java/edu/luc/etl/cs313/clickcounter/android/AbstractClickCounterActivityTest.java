@@ -1,4 +1,4 @@
-package edu.luc.etl.cs313.android.clickcounter;
+package edu.luc.etl.cs313.clickcounter.android;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -9,6 +9,7 @@ import android.content.pm.ActivityInfo;
 import android.support.test.annotation.UiThreadTest;
 import android.widget.Button;
 import android.widget.TextView;
+import edu.luc.etl.cs313.clickcounter.android.ClickCounterActivity;
 import org.junit.Ignore;
 import org.junit.Test;
 

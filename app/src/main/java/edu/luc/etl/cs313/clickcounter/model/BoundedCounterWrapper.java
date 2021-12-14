@@ -1,6 +1,7 @@
-package edu.luc.etl.cs313.android.clickcounter;
+package edu.luc.etl.cs313.clickcounter.model;
 
-import edu.luc.etl.cs313.misc.boundedcounter.cli.BoundedCounter;
+import edu.luc.etl.cs313.clickcounter.android.ClickCounterModel;
+import edu.luc.etl.cs313.clickcounter.cli.BoundedCounter;
 
 /** Adapter for using the CLI bounded counter as the Android click counter model. */
 public class BoundedCounterWrapper implements ClickCounterModel {

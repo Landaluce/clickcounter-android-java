@@ -1,4 +1,4 @@
-package edu.luc.etl.cs313.misc.boundedcounter.cli;
+package edu.luc.etl.cs313.clickcounter.cli;
 
 /**
  * A bounded counter abstraction. Dependency inversion principle (DIP): The client (CLI app) owns

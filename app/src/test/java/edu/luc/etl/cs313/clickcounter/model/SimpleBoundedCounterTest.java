@@ -1,9 +1,9 @@
-package edu.luc.etl.cs313.misc.boundedcounter.model;
+package edu.luc.etl.cs313.clickcounter.model;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
-import edu.luc.etl.cs313.misc.boundedcounter.cli.AbstractCounterTest;
+import edu.luc.etl.cs313.clickcounter.cli.AbstractCounterTest;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

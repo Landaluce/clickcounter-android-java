@@ -1,4 +1,4 @@
-package edu.luc.etl.cs313.android.clickcounter;
+package edu.luc.etl.cs313.clickcounter.android;
 
 import java.io.Serializable;
 

@@ -1,7 +1,7 @@
-package edu.luc.etl.cs313.misc.boundedcounter.model;
+package edu.luc.etl.cs313.clickcounter.model;
 
-import edu.luc.etl.cs313.android.clickcounter.BuildConfig;
-import edu.luc.etl.cs313.misc.boundedcounter.cli.BoundedCounter;
+import edu.luc.etl.cs313.clickcounter.android.BuildConfig;
+import edu.luc.etl.cs313.clickcounter.cli.BoundedCounter;
 import java.util.function.BooleanSupplier;
 
 /** A simple bounded counter implementation. */

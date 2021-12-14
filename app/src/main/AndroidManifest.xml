@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.luc.etl.cs313.android.clickcounter" >
+    package="edu.luc.etl.cs313.clickcounter.android" >
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".ClickCounterActivity"
+            android:name="edu.luc.etl.cs313.clickcounter.android.ClickCounterActivity"
             android:label="@string/title_activity_click_counter"
             android:configChanges="orientation|screenSize|keyboardHidden" >
             <intent-filter>

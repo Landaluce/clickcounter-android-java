@@ -1,4 +1,4 @@
-package edu.luc.etl.cs313.misc.boundedcounter.model;
+package edu.luc.etl.cs313.clickcounter.model;
 
 import static org.junit.Assert.assertEquals;
 
